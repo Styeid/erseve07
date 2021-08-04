@@ -1,0 +1,1314 @@
+
+
+<GridLayout>
+####   Ruimte per individ Kubiek-Vlak   ########
+    padding: 3                     ########   DEFAULT PADDING=3  ####
+    spacing: 4                     ########   DEFAULT SPACING=2  ####
+<BoxLayout>
+####   Ruimte per individ row Kubiek-Vlak   ####
+    padding: 0                    ########   DEFAULT SPACING=0  ###
+<Button>
+    id: buttonss
+    opacity: 0.97
+    font_name: "nasaliza"
+    font_size: 37
+####   Eigenschappen   ####
+    #text: "V4"
+    #text_size: self.size
+    halign: "center"
+    valign: "bottom"
+    #color: (79/255, 79/255, 79/255, 1)
+    background_normal: ""
+    background_color: (77/255, 0/255, 170/255, .1)
+    #bold: True
+    italic: True
+    #outline_color: (0, 0, 0)
+    #outline_width: 0
+
+<ControlXButton@Button>
+    font_name: "seguisym"
+    background_normal: ""
+    background_color: (240/255, 240/255, 240/255, 0)
+    canvas.before:
+        Color:
+            rgba: (0/255, 10/255, 90/255, 0)
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: [70]
+
+<Piont@Label>
+    font_name: "seguisym"
+    text: u"\u25C4"
+    color: (240/255, 240/255, 240/255, 0)
+    font_size: root.width * 0.5
+
+<Piont1a@Label>
+    font_name: "seguisym"
+    color: (240/255, 240/255, 240/255, 0)
+    font_size: root.width * 0.23
+
+<Piont1b@Label>
+    font_name: "Lcd"
+    color: (240/255, 240/255, 240/255, 0)
+    font_size: root.width * 0.33
+
+<Piont2@Label>
+    font_name: "seguisym"
+    color: (240/255, 240/255, 240/255, 0)
+    font_size: root.width * 0.117
+    halign: 'center'
+    valign:'middle'
+
+<Piont3@Label>
+    font_name: "seguisym"
+    color: (240/255, 240/255, 240/255, 0)
+    font_size: root.width * 0.09
+    halign: 'left'
+    valign:'middle'
+
+#####################################################################
+MyLayoutYo:
+    RelativeLayout:
+        id: STart_BUT
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 0.4
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        Label:
+            id: nu_of_twists
+            pos_hint: {"center_x": 0.27, "center_y": 0.94}
+            size_hint: 0.025, 1
+            font_name: "nasaliza"
+            text: str(root.NB_of_TWISTs)
+            color: (111/255, 213/255, 245/255, 1)
+            font_size: root.width * 0.037
+            bold: False
+            italic: True
+            outline_color: (233/255, 46/255, 251/255)
+            outline_width: 0
+        Button:
+            id: minx
+            disabled: False
+            font_name: "seguisym"
+            text: u"\uE016"
+            color: (0/255, 255/255, 255/255, 1)
+            font_size: root.width * 0.015
+            background_normal: ""
+            background_color: (1/255, 220/255, 255/255, 0.5)
+            pos_hint: {"center_x": 0.087, "center_y": 0.94}
+            size_hint: 0.1, 0.09
+            on_release: root.top_colorstonex(self)
+            on_press: root.progress_minus(), root.min_m_twists()
+        Button:
+            id: plux
+            disabled: False
+            font_name: "seguisym"
+            text: u"\uE017"
+            color: (0/255, 255/255, 255/255, 1)
+            font_size: root.width * 0.015
+            background_normal: ""
+            background_color: (1/255, 220/255, 255/255, 0.5)
+            pos_hint: {"center_x": 0.19, "center_y": 0.94}
+            size_hint: 0.1, 0.09
+            on_release: root.top_colorstonex(self)
+            on_press: root.progress_plus(), root.m_max_twists()
+        ProgressBar:
+            id: progress_twists
+            value: root.NB_of_TWISTs
+            min: 0
+            max: root.MAX_twists
+            pos_hint: {"center_x": 0.4, "center_y": 0.94}
+            size_hint_x: 0.2
+            background_color: (255/255, 32/255, 121/255, 1)
+        Label:
+            id: ratingY
+            font_name: "neon2"
+            text: ""
+            color: (212/255, 175/255, 55/255, 1)
+            font_size: root.width * 0.12
+            outline_color: (111/255, 213/255, 245/255)
+            outline_width: 2
+            pos_hint: {"center_x": 0.13, "center_y": 0.74}
+        Label:
+            id: ratingX
+            font_name: "nasaliza"
+            text: ""
+            color: (212/255, 175/255, 55/255, 1)
+            font_size: root.width * 0.02
+            outline_color: (111/255, 213/255, 245/255)
+            outline_width: 0
+            pos_hint: {"center_x": 0.13, "center_y": 0.63}
+        Label:
+            id: home_one
+            text: "J U F A J A  Grid"
+            font_name: "nasaliza"
+            font_size: root.width * 0.09
+            outline_color: (233/255, 46/255, 251/255)
+            outline_width: 2
+            color: (255/255, 255/255, 255/255, 0.79)
+            pos_hint: {"center_x": 0.5, "center_y": 0.45}
+        Label:
+            text: "www.jufaja1@outlook.com"
+            font_name: "seguisym"
+            font_size: root.width * 0.017
+            outline_color: (255/255, 70/255, 90/255)
+            outline_width: 1
+            color: (200/255, 200/255, 200/255, 0.3)
+            pos_hint: {"right": 1.37, "center_y": 0.29}
+        Button:
+            id: home_two
+            text: "Start"
+            font_name: "nasaliza"
+            font_size: root.width * 0.02
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 0.5)
+            size_hint: 0.1, 0.07
+            disabled: True
+            pos_hint: {"center_x": 0.06, "center_y": 0.083}
+            on_press: root.start_button_start()
+        ControlXButton:
+            id: home_twob
+            text: "\n\nExit Game"
+            color: 240/255, 240/255, 240/255, 0.5
+            font_name: "nasaliza"
+            font_size: root.width * 0.02
+            size_hint: 0.15, 0.15
+            disabled: False
+            pos_hint: {"center_x": 0.7, "center_y": 1}
+            canvas.before:
+                Color:
+                    rgba: (230/255, 10/255, 40/255, 0.47)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [40]
+            on_press: root.close_win()
+        Button:
+            id: home_three
+            text: ""
+            font_name: "nasaliza"
+            font_size: root.width * 0.02
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 0.5)
+            size_hint: 0.1, 0.07
+            disabled: True
+            pos_hint: {"center_x": 0.2, "center_y": 0.083}
+            on_press: root.start_button_win()
+<MyLayoutYo>
+    canvas.before:
+        #Color:
+            #rgba: .1, .1, .1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: "zBacksplashAA049.jpg"
+
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+####   Ruimte Window   ###############
+        padding: 4
+####   Top-Balk   ###############
+        BoxLayout:
+            orientation: "horizontal"
+            padding: 0
+            size_hint: (1.00, 0.1)
+            GridLayout:
+                cols: 6
+                rows: 1
+                Label:
+                    size_hint: 0.277, 1
+                Button:
+                    font_name: "nasaliza"
+                    pos: self.pos
+                    size_hint: 0.05, 1
+                    text: ""
+                    color: (240/255, 240/255, 240/255, 0.7)
+                    background_color: (77/255, 0/255, 170/255, 0)
+                    font_size: root.width * 0.015
+                    bold: False
+                    italic: False
+                    outline_color: (233/255, 46/255, 251/255)
+                    outline_width: 0
+
+                # Onderstaande Labels (id = dum3 en dum 2) BELANGERIJK layout !#
+                Label:
+                    id: dum3
+                    text: "DUMX"
+                    color: (240/255, 240/255, 240/255, 0)
+                    background_color: (240/255, 240/255, 240/255, 1)
+                    size_hint: 0.05, 1
+                    canvas.before:
+                        Color:
+                            rgba: self.background_color
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+                            source: "zBackS04.jpg"
+                Label:
+                    id: dum2
+                    text: ""
+                    font_name: "seguisym"
+                    color: (240/255, 240/255, 240/255, 0.9)
+                    background_color: (240/255, 240/255, 240/255, 0)
+                    size_hint: 0.1, 1
+                    canvas.before:
+                        Color:
+                            rgba: self.background_color
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+                Button:
+                    id: jufaja1
+                    disabled: True
+                    font_name: "nasaliza"
+                    pos: self.pos
+                    size_hint: 0.1, 1
+                    text: "JuFaJa"
+                    color: (255/255, 32/255, 121/255, 1)
+                    font_size: root.width * 0.047
+                    bold: False
+                    italic: False
+                    outline_color: (233/255, 46/255, 251/255)
+                    outline_width: 1
+                    on_release: root.top_colorstonez(self)
+                    on_press: root.lvel_arrow(), root.on_start(), root.activate_twists()
+####   Begint-KuBieK   ###############
+        GridLayout:
+            cols: 1
+            rows: 3
+####   rij 1 van Kubiek   ###############
+            BoxLayout:
+                orientation: "horizontal"
+####   rij 1/ XXXXX /1 van Kubiek   ##############
+                GridLayout:
+                    cols: 1
+                    rows: 1
+####   rij 1/ ZIJDE 3/2 van Kubiek   #############
+                GridLayout:
+                    cols: 3
+                    rows: 3
+                    Button:
+                        value: 3
+                        id: h6_3b
+                        text: "E3"
+                        color: (64/255, 255/255, 255/255, 1)
+                        background_normal: ""
+                        background_down: "z0BackS04.png"
+                        background_color: 64/255, 255/255, 255/255, 1
+                    Button:
+                        value: 3
+                        id: z6_2b
+                        text: "R2"
+                        color: (64/255, 255/255, 255/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 64/255, 255/255, 255/255, 1
+                    Button:
+                        value: 3
+                        id: h5_2b
+                        text: "F3"
+                        color: (64/255, 255/255, 255/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 64/255, 255/255, 255/255, 1
+                    Button:
+                        value: 3
+                        id: z9_2b
+                        text: "M2"
+                        color: (64/255, 255/255, 255/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 64/255, 255/255, 255/255, 1
+                    Button:
+                        value: 3
+                        id: c3_3b
+                        text: "U"
+                        font_size: 47
+                        color: (64/255, 255/255, 255/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 64/255, 255/255, 255/255, 0.87
+                    Button:
+                        value: 3
+                        id: z10_2b
+                        text: "N2"
+                        color: (64/255, 255/255, 255/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 64/255, 255/255, 255/255, 1
+                    Button:
+                        value: 3
+                        id: h1_3b
+                        text: "A2"
+                        color: (64/255, 255/255, 255/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 64/255, 255/255, 255/255, 1
+                    Button:
+                        value: 3
+                        id: z2_2b
+                        text: "J2"
+                        color: (64/255, 255/255, 255/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 64/255, 255/255, 255/255, 1
+                    Button:
+                        value: 3
+                        id: h2_2b
+                        text: "B2"
+                        color: (64/255, 255/255, 255/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 64/255, 255/255, 255/255, 1
+####   rij 1/ XXXXX /3 van Kubiek   ###############
+                BoxLayout:
+                    padding: 0
+                    spacing: 0
+                    Label:
+                        id: vizier1
+                        size_hint: 0.19, 1
+                        background_color: (240/255, 240/255, 240/255, 1)
+                        text: ""
+                        canvas.before:
+                            Color:
+                                rgba: self.background_color
+                            Rectangle:
+                                size: self.size
+                                pos: self.pos
+                                source: "zVizier01.jpg"
+                    BoxLayout:
+                        orientation: "vertical"
+                        padding: 0
+                        spacing: 0
+                        size_hint: 0.16, 1
+                        Piont:
+                            id: vizier2
+                            background_color: (240/255, 240/255, 240/255, 1)
+                            text: ""
+                            canvas.before:
+                                Color:
+                                    rgba: self.background_color
+                                Rectangle:
+                                    size: self.size
+                                    pos: self.pos
+                                    source: "zvezier02c.jpg"
+                        Piont:
+                            id: vizier3
+                            background_color: (240/255, 240/255, 240/255, 1)
+                            canvas.before:
+                                Color:
+                                    rgba: self.background_color
+                                Rectangle:
+                                    size: self.size
+                                    pos: self.pos
+                                    source: "zvezier03c.jpg"
+                        Piont:
+                            id: vizier4
+                            background_color: (240/255, 240/255, 240/255, 1)
+                            canvas.before:
+                                Color:
+                                    rgba: self.background_color
+                                Rectangle:
+                                    size: self.size
+                                    pos: self.pos
+                                    source: "zvezier04c.jpg"
+                        Piont:
+                            id: vizier5
+                            background_color: (240/255, 240/255, 240/255, 1)
+                            canvas.before:
+                                Color:
+                                    rgba: self.background_color
+                                Rectangle:
+                                    size: self.size
+                                    pos: self.pos
+                                    source: "zvezier05c.jpg"
+                        Piont:
+                            id: vizier6
+                            background_color: (240/255, 240/255, 240/255, 1)
+                            canvas.before:
+                                Color:
+                                    rgba: self.background_color
+                                Rectangle:
+                                    size: self.size
+                                    pos: self.pos
+                                    source: "zvezier06c.jpg"
+                        Piont:
+                            id: vizier7
+                            background_color: (240/255, 240/255, 240/255, 1)
+                            canvas.before:
+                                Color:
+                                    rgba: self.background_color
+                                Rectangle:
+                                    size: self.size
+                                    pos: self.pos
+                                    source: "zvezier07c.jpg"
+                        Piont:
+                            id: vizier8
+                            background_color: (240/255, 240/255, 240/255, 1)
+                            canvas.before:
+                                Color:
+                                    rgba: self.background_color
+                                Rectangle:
+                                    size: self.size
+                                    pos: self.pos
+                                    source: "zvezier08c.jpg"
+                        Piont:
+                            id: vizier9
+                            background_color: (240/255, 240/255, 240/255, 1)
+                            canvas.before:
+                                Color:
+                                    rgba: self.background_color
+                                Rectangle:
+                                    size: self.size
+                                    pos: self.pos
+                                    source: "zvezier09xc.jpg"
+                        Piont:
+                            id: vizier10
+                            background_color: (240/255, 240/255, 240/255, 1)
+                            text: ""
+                            canvas.before:
+                                Color:
+                                    rgba: self.background_color
+                                Rectangle:
+                                    size: self.size
+                                    pos: self.pos
+                                    source: "zvezier10c.jpg"
+                    BoxLayout:
+                        orientation: "vertical"
+                        padding: 0
+                        spacing: 0
+                        size_hint: 0.26, 1
+                        Piont:
+                            id: vizier11
+                            background_color: (240/255, 240/255, 240/255, 1)
+                            text: ""
+                            canvas.before:
+                                Color:
+                                    rgba: self.background_color
+                                Rectangle:
+                                    size: self.size
+                                    pos: self.pos
+                                    source: "zVizier11.jpg"
+                        Piont:
+                            id: vizier12
+                            background_color: (240/255, 240/255, 240/255, 1)
+                            text: ""
+                            canvas.before:
+                                Color:
+                                    rgba: self.background_color
+                                Rectangle:
+                                    size: self.size
+                                    pos: self.pos
+                                    source: "zVizier12.jpg"
+                    Piont1b:
+                        id: vizier13
+                        size_hint: 0.6, 1
+                        text: ""
+                        background_color: (240/255, 240/255, 240/255, 1)
+                        canvas.before:
+                            Color:
+                                rgba: self.background_color
+                            Rectangle:
+                                size: self.size
+                                pos: self.pos
+                                source: "zVizier13.jpg"
+                    Piont2:
+                        id: vizier14
+                        size_hint: 0.4, 1
+                        text: ""
+                        background_color: (240/255, 240/255, 240/255, 1)
+                        canvas.before:
+                            Color:
+                                rgba: self.background_color
+                            Rectangle:
+                                size: self.size
+                                pos: self.pos
+                                source: "zVizier14.jpg"
+####   rij 1/ XXXXX /4 van Kubiek   #############
+                GridLayout:
+                    padding: 0
+                    spacing: 0
+                    cols: 2
+                    rows: 2
+                    Piont2:
+                        #id: vizier15
+                        id: playy_twists
+                        text: ""
+                        background_color: (240/255, 240/255, 240/255, 1)
+                        canvas.before:
+                            Color:
+                                rgba: self.background_color
+                            Rectangle:
+                                size: self.size
+                                pos: self.pos
+                                source: "zVizier15.jpg"
+                    Piont1a:
+                        id: vizier17
+                        background_color: (240/255, 240/255, 240/255, 1)
+                        text: ""
+                        canvas.before:
+                            Color:
+                                rgba: self.background_color
+                            Rectangle:
+                                size: self.size
+                                pos: self.pos
+                                source: "zVizier17.jpg"
+                    Piont:
+                        id: vizier16
+                        background_color: (240/255, 240/255, 240/255, 1)
+                        text: ""
+                        canvas.before:
+                            Color:
+                                rgba: self.background_color
+                            Rectangle:
+                                size: self.size
+                                pos: self.pos
+                                source: "zVizier16.jpg"
+                    Piont2:
+                        id: vizier18
+                        background_color: (240/255, 240/255, 240/255, 1)
+                        text: "Moves left \n\n"
+                        font_size: root.width * 0.05
+                        canvas.before:
+                            Color:
+                                rgba: self.background_color
+                            Rectangle:
+                                size: self.size
+                                pos: self.pos
+                                source: "zVizier18.jpg"
+####   rij 2 van Kubiek   ###############
+            BoxLayout:
+                orientation: "horizontal"
+####   rij 2/ ZIJDE 2/1 van Kubiek   ###############
+                GridLayout:
+                    cols: 3
+                    rows: 3
+                    Button:
+                        value: 2
+                        id: h6_2b
+                        text: "E2"
+                        color: (0/255, 255/255, 0/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 0/255, 255/255, 0/255, 1
+                    Button:
+                        value: 2
+                        id: z9_1b
+                        text: "M1"
+                        color: (0/255, 255/255, 0/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 0/255, 255/255, 0/255, 1
+                    Button:
+                        value: 2
+                        id: h1_2b
+                        text: "A3"
+                        color: (0/255, 255/255, 0/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 0/255, 255/255, 0/255, 1
+                    Button:
+                        value: 2
+                        id: z7_2b
+                        text: "S2"
+                        color: (0/255, 255/255, 0/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 0/255, 255/255, 0/255, 1
+                    Button:
+                        value: 2
+                        id: c2_2b
+                        text: "RB"
+                        font_size: 44
+                        color: (0/255, 255/255, 0/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 0/255, 255/255, 0/255, 0.87
+                    Button:
+                        value: 2
+                        id: z1_2b
+                        text: "I2"
+                        color: (0/255, 255/255, 0/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 0/255, 255/255, 0/255, 1
+                    Button:
+                        value: 2
+                        id: h7_2b
+                        text: "G2"
+                        color: (0/255, 255/255, 0/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 0/255, 255/255, 0/255, 1
+                    Button:
+                        value: 2
+                        id: z12_1b
+                        text: "P1"
+                        color: (0/255, 255/255, 0/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 0/255, 255/255, 0/255, 1
+                    Button:
+                        value: 2
+                        id: h4_3b
+                        text: "D3"
+                        color: (0/255, 255/255, 0/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 0/255, 255/255, 0/255, 1
+####   rij 2/ ZIJDE 1/2 van Kubiek   ###############
+                GridLayout:
+                    cols: 3
+                    rows: 3
+                    Button:
+                        id: h1_1b
+                        value: 1
+                        text: "A1"
+                        color: (255/255, 156/255, 0/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 255/255, 156/255, 0/255, 1
+                    Button:
+                        value: 1
+                        id: z2_1b
+                        text: "J1"
+                        color: (255/255, 156/255, 0/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 255/255, 156/255, 0/255, 1
+                    Button:
+                        value: 1
+                        id: h2_1b
+                        text: "B1"
+                        color: (255/255, 156/255, 0/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 255/255, 156/255, 0/255, 1
+                    Button:
+                        value: 1
+                        id: z1_1b
+                        text: "I1"
+                        color: (255/255, 156/255, 0/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 255/255, 156/255, 0/255, 1
+                    Button:
+                        value: 1
+                        id: c1_1b
+                        text: "J"
+                        font_size: 47
+                        color: (255/255, 156/255, 0/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 255/255, 156/255, 0/255, 0.87
+                    Button:
+                        value: 1
+                        id: z3_1b
+                        text: "K1"
+                        color: (255/255, 156/255, 0/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 255/255, 156/255, 0/255, 1
+                    Button:
+                        value: 1
+                        id: h4_1b
+                        text: "D1"
+                        color: (255/255, 156/255, 0/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 255/255, 156/255, 0/255, 1
+                    Button:
+                        value: 1
+                        id: z4_1b
+                        text: "L1"
+                        color: (255/255, 156/255, 0/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 255/255, 156/255, 0/255, 1
+                    Button:
+                        value: 1
+                        id: h3_1b
+                        text: "C1"
+                        color: (255/255, 156/255, 0/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 255/255, 156/255, 0/255, 1
+####   rij 2/ ZIJDE 5/3 van Kubiek   ###############
+                GridLayout:
+                    cols: 3
+                    rows: 3
+                    Button:
+                        value: 5
+                        id: h2_3b
+                        text: "B3"
+                        color: (255/255, 255/255, 0/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 255/255, 255/255, 0/255, 1
+                    Button:
+                        value: 5
+                        id: z10_1b
+                        text: "N1"
+                        color: (255/255, 255/255, 0/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 255/255, 255/255, 0/255, 1
+                    Button:
+                        value: 5
+                        id: h5_3b
+                        text: "F2"
+                        color: (255/255, 255/255, 0/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 255/255, 255/255, 0/255, 1
+                    Button:
+                        value: 5
+                        id: z3_2b
+                        text: "K2"
+                        color: (255/255, 255/255, 0/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 255/255, 255/255, 0/255, 1
+                    Button:
+                        value: 5
+                        id: c5_5b
+                        text: "F"
+                        font_size: 47
+                        color: (255/255, 255/255, 0/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 255/255, 255/255, 0/255, 0.87
+                    Button:
+                        value: 5
+                        id: z5_2b
+                        text: "Q2"
+                        color: (255/255, 255/255, 0/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 255/255, 255/255, 0/255, 1
+                    Button:
+                        value: 5
+                        id: h3_2b
+                        text: "C2"
+                        color: (255/255, 255/255, 0/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 255/255, 255/255, 0/255, 1
+                    Button:
+                        value: 5
+                        id: z11_1b
+                        text: "O1"
+                        color: (255/255, 255/255, 0/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 255/255, 255/255, 0/255, 1
+                    Button:
+                        value: 5
+                        id: h8_2b
+                        text: "H2"
+                        color: (255/255, 255/255, 0/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 255/255, 255/255, 0/255, 1
+####   rij 2/ ZIJDE 6/4 van Kubiek   ###############
+                GridLayout:
+                    cols: 3
+                    rows: 3
+                    Button:
+                        value: 6
+                        id: h5_1b
+                        text: "F1"
+                        color: (255/255, 0/255, 0/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 255/255, 0/255, 0/255, 1
+                    Button:
+                        value: 6
+                        id: z6_1b
+                        text: "R1"
+                        color: (255/255, 0/255, 0/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 255/255, 0/255, 0/255, 1
+                    Button:
+                        value: 6
+                        id: h6_1b
+                        text: "E1"
+                        color: (255/255, 0/255, 0/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 255/255, 0/255, 0/255, 1
+                    Button:
+                        value: 6
+                        id: z5_1b
+                        text: "Q1"
+                        color: (255/255, 0/255, 0/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 255/255, 0/255, 0/255, 1
+                    Button:
+                        value: 6
+                        id: c6_6b
+                        text: "A"
+                        font_size: 47
+                        color: (255/255, 0/255, 0/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 255/255, 0/255, 0/255, 0.87
+                    Button:
+                        value: 6
+                        id: z7_1b
+                        text: "S1"
+                        color: (255/255, 0/255, 0/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 255/255, 0/255, 0/255, 1
+                    Button:
+                        value: 6
+                        id: h8_1b
+                        text: "H1"
+                        color: (255/255, 0/255, 0/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 255/255, 0/255, 0/255, 1
+                    Button:
+                        value: 6
+                        id: z8_1b
+                        text: "T1"
+                        color: (255/255, 0/255, 0/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 255/255, 0/255, 0/255, 1
+                    Button:
+                        value: 6
+                        id: h7_1b
+                        text: "G1"
+                        color: (255/255, 0/255, 0/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 255/255, 0/255, 0/255, 1
+####   rij 3 van Kubiek   ###############
+            BoxLayout:
+                orientation: "horizontal"
+####   Controles/1        ###############
+                BoxLayout:
+                    orientation: "vertical"
+                    padding: 1
+                    spacing: 1
+####   rij 1 van controles/1   ###############
+                    BoxLayout:
+                        orientation: "horizontal"
+                        spacing: 1
+                        ControlXButton:
+                            id: FL
+                            disabled: True
+                            font_size: root.width * 0.03
+                            halign: "center"
+                            valign: "center"
+                            text: u"\u2BA6"
+                            bold: False
+                            italic: True
+                            outline_color: (255/255, 139/255, 139/255, 1)
+                            outline_width: 0.5
+                            color: (255/255, 95/255, 1/255, 1)
+                            #background_color: (0/255, 10/255, 70/255, 1)
+                            on_release: root.front_left_rightz(), root.front_lom(), root.ani_darkgrey(self)
+                            on_press: root.front_left_rightx()
+                        ControlXButton:
+                            id: MU
+                            disabled: True
+                            font_size: root.width * 0.03
+                            halign: "center"
+                            valign: "center"
+                            text: u"\u2B9D"
+                            bold: True
+                            italic: False
+                            outline_color: (255/255, 139/255, 139/255, 1)
+                            outline_width: 1.3
+                            color: (206/255, 0/255, 0/255, 1)
+                            #background_color: (0/255, 10/255, 90/255, 1)
+                            on_release: root.midle_up_downz(), root.midle_up(), root.ani_grey(self)
+                            on_press: root.midle_up_downx()
+                        ControlXButton:
+                            id: FR
+                            disabled: True
+                            font_size: root.width * 0.03
+                            halign: "center"
+                            valign: "center"
+                            text: u"\u2BA7"
+                            bold: False
+                            italic: True
+                            outline_color: (255/255, 139/255, 139/255, 1)
+                            outline_width: 0.5
+                            color: (255/255, 95/255, 1/255, 1)
+                            #background_color: (0/255, 10/255, 70/255, 1)
+                            on_release: root.front_left_rightz(), root.front_rom(), root.ani_darkgrey(self)
+                            on_press: root.front_left_rightx()
+####   rij 2 van controles/1   ###############
+                    BoxLayout:
+                        orientation: "horizontal"
+                        spacing: 2
+                        ControlXButton:
+                            id: ML
+                            disabled: True
+                            font_size: root.width * 0.03
+                            halign: "center"
+                            valign: "center"
+                            text: u"\u2B9C"
+                            bold: True
+                            italic: False
+                            outline_color: (255/255, 139/255, 139/255, 1)
+                            outline_width: 1.3
+                            color: (206/255, 0/255, 0/255, 1)
+                            #background_color: (0/255, 10/255, 90/255, 1)
+                            on_release: root.midle_right_leftz(), root.midle_left(), root.ani_grey(self)
+                            on_press: root.midle_right_leftx()
+
+                        ControlXButton:
+                            id: MR
+                            disabled: True
+                            font_size: root.width * 0.03
+                            halign: "center"
+                            valign: "center"
+                            text: u"\u2B9E"
+                            bold: True
+                            italic: False
+                            outline_color: (255/255, 139/255, 139/255, 1)
+                            outline_width: 1.3
+                            color: (206/255, 0/255, 0/255, 1)
+                            #background_color: (0/255, 10/255, 90/255, 1)
+                            on_release: root.midle_right_leftz(), root.midle_right(), root.ani_grey(self)
+                            on_press: root.midle_right_leftx()
+
+####   rij 3 van controles/1   ###############
+                    BoxLayout:
+                        orientation: "horizontal"
+                        spacing: 1
+                        Label:
+                        ControlXButton:
+                            id: MD
+                            disabled: True
+                            font_size: root.width * 0.03
+                            halign: "center"
+                            valign: "center"
+                            text: u"\u2B9F"
+                            bold: True
+                            italic: False
+                            outline_color: (255/255, 139/255, 139/255, 1)
+                            outline_width: 1.3
+                            color: (206/255, 0/255, 0/255, 1)
+                            #background_color: (0/255, 10/255, 90/255, 1)
+                            on_release: root.midle_up_downz(), root.midle_down(), root.ani_grey(self)
+                            on_press: root.midle_up_downx()
+                        Label:
+####   rij 3/ ZIJDE 4/2 van Kubiek   ###############
+                GridLayout:
+                    cols: 3
+                    rows: 3
+                    Button:
+                        value: 4
+                        id: h4_2b
+                        text: "D2"
+                        color: (255/255, 0/255, 255/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 255/255, 0/255, 255/255, 1
+                    Button:
+                        value: 4
+                        id: z4_2b
+                        text: "L2"
+                        color: (255/255, 0/255, 255/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 255/255, 0/255, 255/255, 1
+                    Button:
+                        value: 4
+                        id: h3_3b
+                        text: "C3"
+                        color: (255/255, 0/255, 255/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 255/255, 0/255, 255/255, 1
+                    Button:
+                        value: 4
+                        id: z12_2b
+                        text: "P2"
+                        color: (255/255, 0/255, 255/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 255/255, 0/255, 255/255, 1
+                    Button:
+                        value: 4
+                        id: c4_4b
+                        text: "A"
+                        font_size: 47
+                        color: (255/255, 0/255, 255/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 255/255, 0/255, 255/255, 0.87
+                    Button:
+                        value: 4
+                        id: z11_2b
+                        text: "O2"
+                        color: (255/255, 0/255, 255/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 255/255, 0/255, 255/255, 1
+                    Button:
+                        value: 4
+                        id: h7_3b
+                        text: "G3"
+                        color: (255/255, 0/255, 255/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 255/255, 0/255, 255/255, 1
+                    Button:
+                        value: 4
+                        id: z8_2b
+                        text: "T2"
+                        color: (255/255, 0/255, 255/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 255/255, 0/255, 255/255, 1
+                    Button:
+                        value: 4
+                        id: h8_3b
+                        text: "H3"
+                        color: (255/255, 0/255, 255/255, 1)
+                        background_normal: ""
+                        background_down: "z0Back.png"
+                        background_color: 255/255, 0/255, 255/255, 1
+####   rij 1/ DuMMy's /4 van Kubiek   ################
+                BoxLayout:
+                    padding: 17
+                    spacing: 19
+                    BoxLayout:
+                        orientation: "horizontal"
+                        padding: 0
+                        spacing: 0
+                        ControlXButton:
+                            id: LE
+                            size_hint: 1.5, 1
+                            font_size: root.width * 0.03
+                            halign: "center"
+                            valign: "center"
+                            text: u"\u23EA"
+                            bold: True
+                            italic: False
+                            outline_color: (255/255, 139/255, 139/255, 1)
+                            outline_width: 1
+                            color: (206/255, 0/255, 0/255, 1)
+                            #background_color: (0/255, 10/255, 90/255, 1)
+                            on_release: root.ani_darkgrey_holex(self)
+                            on_press: root.left_hole()
+                    BoxLayout:
+                        orientation: "vertical"
+                        padding: 1
+                        ControlXButton:
+                            id: UP
+                            size_hint: 1, 2
+                            font_size: root.width * 0.03
+                            halign: "center"
+                            valign: "center"
+                            text: u"\u23EB"
+                            bold: True
+                            italic: False
+                            outline_color: (255/255, 139/255, 139/255, 1)
+                            outline_width: 1
+                            color: (206/255, 0/255, 0/255, 1)
+                            #background_color: (0/255, 10/255, 90/255, 1)
+                            on_release: root.ani_darkgrey_holey(self)
+                            on_press: root.up_hole()
+                        Button:
+                            id: dum1
+                            text: "JuFaJa"
+                            color: (40/255, 40/255, 40/255, 0)
+                            background_normal: ""
+                            background_down: "z0Back.png"
+                            background_color: 73/255, 73/255, 73/255, 0
+                        ControlXButton:
+                            id: vIEW
+                            font_size: root.width * 0.02
+                            halign: "center"
+                            valign: "center"
+                            text: u"\uE052"
+                            bold: True
+                            italic: False
+                            outline_color: (255/255, 139/255, 139/255, 1)
+                            outline_width: 1.3
+                            color: (206/255, 0/255, 0/255, 1)
+                            #background_color: (0/255, 10/255, 90/255, 1)
+                            on_release: root.view_tegel_nummersz()
+                            on_press: root.view_tegel_nummersx()
+                            on_release: root.vizier_off()
+                            on_press: root.vizier_on(), root.vizier_display(),root.u_total() ,root.aantal_x_twist()
+                        Button:
+                            id: dum5
+                            text: "JuFaJa"
+                            color: (40/255, 40/255, 40/255, 0)
+                            background_normal: "z0Back.png"
+                            background_down: ""
+                            background_color: 73/255, 73/255, 73/255, 0
+                        ControlXButton:
+                            id: DO
+                            size_hint: 1, 2
+                            font_size: root.width * 0.03
+                            halign: "center"
+                            valign: "center"
+                            text: u"\u23EC"
+                            bold: True
+                            italic: False
+                            outline_color: (255/255, 139/255, 139/255, 1)
+                            outline_width: 1
+                            color: (206/255, 0/255, 0/255, 1)
+                            #background_color: (0/255, 10/255, 90/255, 1)
+                            on_release: root.ani_darkgrey_holey(self)
+                            on_press: root.down_hole()
+                    BoxLayout:
+                        orientation: "horizontal"
+                        padding:0
+                        spacing:0
+                        ControlXButton:
+                            id: RI
+                            size_hint: 1.5, 1
+                            font_size: root.width * 0.03
+                            halign: "center"
+                            valign: "center"
+                            text: u"\u23E9"
+                            bold: True
+                            italic: False
+                            outline_color: (255/255, 139/255, 139/255, 1)
+                            outline_width: 1
+                            color: (206/255, 0/255, 0/255, 1)
+                            #background_color: (0/255, 10/255, 90/255, 1)
+                            on_release: root.ani_darkgrey_holex(self)
+                            on_press: root.right_hole()
+####   Controles/2        ###############
+                GridLayout:
+                    cols: 2
+                    rows: 2
+                    padding: 0
+                    spacing: 0
+####   rij 2 van controles/2   ###############
+                    BoxLayout:
+                        padding:0
+                        spacing:0
+                        ControlXButton:
+                            id: LU
+                            disabled: True
+                            font_size: root.width * 0.03
+                            halign: "center"
+                            valign: "center"
+                            text: u"\u25E7\u25B3"
+                            bold: True
+                            italic: False
+                            color: (255/255, 255/255, 204/255, 1)
+                            #background_color: (164/255, 255/255, 160/255, 1)
+                            on_release: root.left_up_downz(), root.left_up(), root.ani_green_one(self)
+                            on_press: root.left_up_downx()
+                        ControlXButton:
+                            id: UL
+                            disabled: True
+                            font_size: root.width * 0.025
+                            halign: "center"
+                            valign: "center"
+                            text: u"\u25C0\u2B12"
+                            bold: True
+                            italic: False
+                            color: (255/255, 255/255, 0/255, 1)
+                            #background_color: (64/255, 226/255, 160/255, 1)
+                            on_release: root.up_right_leftz(), root.up_left(), root.ani_green_two(self)
+                            on_press: root.up_right_leftx()
+                    BoxLayout:
+                        padding:0
+                        spacing:0
+                        ControlXButton:
+                            id: UR
+                            disabled: True
+                            font_size: root.width * 0.025
+                            halign: "center"
+                            valign: "center"
+                            text: u"\u2B12\u25B6"
+                            bold: True
+                            italic: False
+                            color: (255/255, 102/255, 102/255, 1)
+                            #background_color: (255/255, 102/255, 102/255, 1)
+                            on_release: root.up_right_leftz(), root.up_right(), root.ani_pink_two(self)
+                            on_press: root.up_right_leftx()
+                        ControlXButton:
+                            id: RU
+                            disabled: True
+                            font_size: root.width * 0.03
+                            halign: "center"
+                            valign: "center"
+                            text: u"\u25B3\u25E8"
+                            bold: True
+                            italic: False
+                            color: (255/255, 147/255, 147/255, 1)
+                            #background_color: (255/255, 147/255, 147/255, 1)
+                            on_release: root.right_up_downz(), root.right_up(), root.ani_pink_one(self)
+                            on_press: root.right_up_downx()
+####   rij 2 van controles/2   ###############
+                    BoxLayout:
+                        padding:0
+                        spacing:0
+                        ControlXButton:
+                            id: LD
+                            disabled: True
+                            font_size: root.width * 0.03
+                            halign: "center"
+                            valign: "center"
+                            text: u"\u25E7\u25BD"
+                            bold: True
+                            italic: False
+                            color: (190/255, 240/255, 255/255, 1)
+                            #background_color: (190/255, 240/255, 255/255, 1)
+                            on_release: root.left_up_downz(), root.left_down(), root.ani_blue_two(self)
+                            on_press: root.left_up_downx()
+                        ControlXButton:
+                            id: DL
+                            disabled: True
+                            font_size: root.width * 0.025
+                            halign: "center"
+                            valign: "center"
+                            text: u"\u25C0\u2B13"
+                            bold: True
+                            italic: False
+                            color: (0/255, 176/255, 240/255, 1)
+                            #background_color: (124/255, 178/255, 232/255, 1)
+                            on_release: root.down_right_leftz(), root.down_left(), root.ani_blue_one(self)
+                            on_press: root.down_right_leftx()
+                    BoxLayout:
+                        padding:0
+                        spacing:0
+                        ControlXButton:
+                            id: DR
+                            disabled: True
+                            font_size: root.width * 0.025
+                            halign: "center"
+                            valign: "center"
+                            text: u"\u2B13\u25B6"
+                            bold: True
+                            italic: True
+                            color: (0/255, 255/255, 153/255, 1)
+                            #background_color: (220/255, 105/255, 248/255, 1)
+                            on_release: root.down_right_leftz(), root.down_right(), root.ani_purp_one(self)
+                            on_press: root.down_right_leftx()
+                        ControlXButton:
+                            id: RD
+                            disabled: True
+                            font_size: root.width * 0.03
+                            halign: "center"
+                            valign: "center"
+                            text: u"\u25BD\u25E8"
+                            bold: True
+                            italic: False
+                            color: (64/255, 226/255, 160/255, 1)
+                            #background_color: (240/255, 170/255, 248/255, 1)
+                            on_release: root.right_up_downz(), root.right_down(), root.ani_purp_two(self)
+                            on_press: root.right_up_downx()
