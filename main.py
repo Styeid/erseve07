@@ -90,11 +90,11 @@ class MyLayoutYo(RelativeLayout):
         #self.data_display()
 
     def init_audio(self):
-        self.sound_shuffle = SoundLoader.load("BlipClockShuffle004.wav")
-        self.sound_countd_own = SoundLoader.load("CountD002.wav")
-        self.sound_count_bang = SoundLoader.load("discoWin003.wav")
-        self.sound_zero_twist = SoundLoader.load("GO_007a.wav")
-        self.sound_onwin = SoundLoader.load("ONWin_Part001w.wav")
+        self.sound_shuffle = SoundLoader.load("wav/BlipClockShuffle004.wav")
+        self.sound_countd_own = SoundLoader.load("wav/CountD002.wav")
+        self.sound_count_bang = SoundLoader.load("wav/discoWin003.wav")
+        self.sound_zero_twist = SoundLoader.load("wav/GO_007a.wav")
+        self.sound_onwin = SoundLoader.load("wav/ONWin_Part001w.wav")
 
         self.sound_shuffle.volume = 1
         self.sound_countd_own.volume = 1
