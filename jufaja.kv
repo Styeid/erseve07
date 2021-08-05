@@ -10,7 +10,7 @@
 <Button>
     id: buttonss
     opacity: 0.97
-    font_name: "nasaliza"
+    font_name: "ttf/nasaliza"
     font_size: 37
 ####   Eigenschappen   ####
     #text: "V4"
@@ -27,7 +27,7 @@
     #outline_width: 0
 
 <ControlXButton@Button>
-    font_name: "seguisym"
+    font_name: "ttf/seguisym"
     background_normal: ""
     background_color: (240/255, 240/255, 240/255, 0)
     canvas.before:
@@ -39,13 +39,13 @@
             radius: [70]
 
 <Piont@Label>
-    font_name: "seguisym"
+    font_name: "ttf/seguisym"
     text: u"\u25C4"
     color: (240/255, 240/255, 240/255, 0)
     font_size: root.width * 0.5
 
 <Piont1a@Label>
-    font_name: "seguisym"
+    font_name: "ttf/seguisym"
     color: (240/255, 240/255, 240/255, 0)
     font_size: root.width * 0.23
 
@@ -55,14 +55,14 @@
     font_size: root.width * 0.33
 
 <Piont2@Label>
-    font_name: "seguisym"
+    font_name: "ttf/seguisym"
     color: (240/255, 240/255, 240/255, 0)
     font_size: root.width * 0.117
     halign: 'center'
     valign:'middle'
 
 <Piont3@Label>
-    font_name: "seguisym"
+    font_name: "ttf/seguisym"
     color: (240/255, 240/255, 240/255, 0)
     font_size: root.width * 0.09
     halign: 'left'
@@ -83,7 +83,7 @@ MyLayoutYo:
             id: nu_of_twists
             pos_hint: {"center_x": 0.27, "center_y": 0.94}
             size_hint: 0.025, 1
-            font_name: "nasaliza"
+            font_name: "ttf/nasaliza"
             text: str(root.NB_of_TWISTs)
             color: (111/255, 213/255, 245/255, 1)
             font_size: root.width * 0.037
@@ -94,7 +94,7 @@ MyLayoutYo:
         Button:
             id: minx
             disabled: False
-            font_name: "seguisym"
+            font_name: "ttf/seguisym"
             text: u"\uE016"
             color: (0/255, 255/255, 255/255, 1)
             font_size: root.width * 0.015
@@ -107,7 +107,7 @@ MyLayoutYo:
         Button:
             id: plux
             disabled: False
-            font_name: "seguisym"
+            font_name: "ttf/seguisym"
             text: u"\uE017"
             color: (0/255, 255/255, 255/255, 1)
             font_size: root.width * 0.015
@@ -127,7 +127,7 @@ MyLayoutYo:
             background_color: (255/255, 32/255, 121/255, 1)
         Label:
             id: ratingY
-            font_name: "neon2"
+            font_name: "ttf/neon2"
             text: ""
             color: (212/255, 175/255, 55/255, 1)
             font_size: root.width * 0.12
@@ -136,7 +136,7 @@ MyLayoutYo:
             pos_hint: {"center_x": 0.13, "center_y": 0.74}
         Label:
             id: ratingX
-            font_name: "nasaliza"
+            font_name: "ttf/nasaliza"
             text: ""
             color: (212/255, 175/255, 55/255, 1)
             font_size: root.width * 0.02
@@ -146,7 +146,7 @@ MyLayoutYo:
         Label:
             id: home_one
             text: "J U F A J A  Grid"
-            font_name: "nasaliza"
+            font_name: "ttf/nasaliza"
             font_size: root.width * 0.09
             outline_color: (233/255, 46/255, 251/255)
             outline_width: 2
@@ -154,7 +154,7 @@ MyLayoutYo:
             pos_hint: {"center_x": 0.5, "center_y": 0.45}
         Label:
             text: "www.jufaja1@outlook.com"
-            font_name: "seguisym"
+            font_name: "ttf/seguisym"
             font_size: root.width * 0.017
             outline_color: (255/255, 70/255, 90/255)
             outline_width: 1
@@ -163,7 +163,7 @@ MyLayoutYo:
         Button:
             id: home_two
             text: "Start"
-            font_name: "nasaliza"
+            font_name: "ttf/nasaliza"
             font_size: root.width * 0.02
             background_normal: ""
             background_color: (255/255, 70/255, 90/255, 0.5)
@@ -175,7 +175,7 @@ MyLayoutYo:
             id: home_twob
             text: "\n\nExit Game"
             color: 240/255, 240/255, 240/255, 0.5
-            font_name: "nasaliza"
+            font_name: "ttf/nasaliza"
             font_size: root.width * 0.02
             size_hint: 0.15, 0.15
             disabled: False
@@ -191,7 +191,7 @@ MyLayoutYo:
         Button:
             id: home_three
             text: ""
-            font_name: "nasaliza"
+            font_name: "ttf/nasaliza"
             font_size: root.width * 0.02
             background_normal: ""
             background_color: (255/255, 70/255, 90/255, 0.5)
@@ -224,7 +224,7 @@ MyLayoutYo:
                 Label:
                     size_hint: 0.277, 1
                 Button:
-                    font_name: "nasaliza"
+                    font_name: "ttf/nasaliza"
                     pos: self.pos
                     size_hint: 0.05, 1
                     text: ""
@@ -253,7 +253,7 @@ MyLayoutYo:
                 Label:
                     id: dum2
                     text: ""
-                    font_name: "seguisym"
+                    font_name: "ttf/seguisym"
                     color: (240/255, 240/255, 240/255, 0.9)
                     background_color: (240/255, 240/255, 240/255, 0)
                     size_hint: 0.1, 1
@@ -266,7 +266,7 @@ MyLayoutYo:
                 Button:
                     id: jufaja1
                     disabled: True
-                    font_name: "nasaliza"
+                    font_name: "ttf/nasaliza"
                     pos: self.pos
                     size_hint: 0.1, 1
                     text: "JuFaJa"
