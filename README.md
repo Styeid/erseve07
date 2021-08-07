@@ -6,3 +6,7 @@ Jufaja-project-05-04082021
   - version 001 (not final)
   - aproved 06- 08 -2021 play store
   - 07- 08 -2021 working on patch 0001 to improve the app
+    - layout move buttons
+    - upscale time
+    - Add file eyeRA (jpg)
+    - new image icon number 2 (png)
