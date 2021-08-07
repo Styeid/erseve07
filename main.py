@@ -67,7 +67,7 @@ class MyLayoutYo(RelativeLayout):
     SCORE_level = 0
     ST_MAX_level = 6
     SCORE_time = 0
-    ST_MAX_time = 1801
+    ST_MAX_time = 2701
     SCORE_twist = 0
     ST_MAX_twist = 100
     SCORE_totaal = 0
@@ -155,10 +155,10 @@ class MyLayoutYo(RelativeLayout):
         self.CLOCK_count.cancel()
 
     def tijd_rest(self, *args):
-            self.TWIST_TIME = self.TWIST_TIME - self.TIME_SCOOP
-            m, s = divmod(self.TWIST_TIME, 60)
-            self.TIME_LEFT = str(m).zfill(2) + ":" + str(s).zfill(2)
-            self.ids.vizier13.text = self.TIME_LEFT
+        self.TWIST_TIME = self.TWIST_TIME - self.TIME_SCOOP
+        m, s = divmod(self.TWIST_TIME, 60)
+        self.TIME_LEFT = str(m).zfill(2) + ":" + str(s).zfill(2)
+        self.ids.vizier13.text = self.TIME_LEFT
 
     def gameover(self, *args):
         if not self.STATE_GAME_OVER:
@@ -250,7 +250,7 @@ class MyLayoutYo(RelativeLayout):
         self.RATING_I = int(self.RATING)
         try:
             if 10 >= self.RATING_I >= -1:
-                self.ids.ratingY.text = str("0")
+                self.ids.ratingY.text = str(u"\u002D")
                 self.RATING_I = "X"
                 self.game_over_nonsound(1)
                 self.cancel_onwin()
@@ -528,7 +528,7 @@ class MyLayoutYo(RelativeLayout):
             self.ids.vizier3.color = self.ids.dum3.color
         elif 4 >= self.NB_of_TWISTs >= 2:
             self.AANTAL_Twistys += 25
-            self.TWIST_TIME = 41
+            self.TWIST_TIME = 301
             self.ids.vizier11.text = str(1)
             self.SCORE_level = 1
             self.sound_countd_own.play()
@@ -544,7 +544,7 @@ class MyLayoutYo(RelativeLayout):
             self.ids.vizier3.color = self.ids.dum3.color
         elif 7 >= self.NB_of_TWISTs >= 4:
             self.AANTAL_Twistys += 49
-            self.TWIST_TIME = 451
+            self.TWIST_TIME = 721
             self.ids.vizier11.text = str(2)
             self.SCORE_level = 2
             self.sound_countd_own.play()
@@ -560,7 +560,7 @@ class MyLayoutYo(RelativeLayout):
             self.ids.vizier3.color = self.ids.dum3.color
         elif 10 >= self.NB_of_TWISTs >= 7:
             self.AANTAL_Twistys += 74
-            self.TWIST_TIME = 601
+            self.TWIST_TIME = 901
             self.ids.vizier11.text = str(3)
             self.SCORE_level = 3
             self.sound_countd_own.play()
@@ -576,7 +576,7 @@ class MyLayoutYo(RelativeLayout):
             self.ids.vizier3.color = self.ids.dum3.color
         elif 15 >= self.NB_of_TWISTs >= 10:
             self.AANTAL_Twistys += 99
-            self.TWIST_TIME = 901
+            self.TWIST_TIME = 1201
             self.ids.vizier11.text = str(4)
             self.SCORE_level = 4
             self.sound_countd_own.play()
@@ -592,7 +592,7 @@ class MyLayoutYo(RelativeLayout):
             self.ids.vizier3.color = self.ids.dum3.color
         elif 25 >= self.NB_of_TWISTs >= 15:
             self.AANTAL_Twistys += 124
-            self.TWIST_TIME = 1201
+            self.TWIST_TIME = 1501
             self.ids.vizier11.text = str(5)
             self.SCORE_level = 5
             self.sound_countd_own.play()
@@ -608,7 +608,7 @@ class MyLayoutYo(RelativeLayout):
             self.ids.vizier3.color = self.ids.dum3.color
         else:
             self.AANTAL_Twistys += 149
-            self.TWIST_TIME = 1801
+            self.TWIST_TIME = 2701
             self.ids.vizier11.text = str(6)
             self.SCORE_level = 6
             self.sound_countd_own.play()

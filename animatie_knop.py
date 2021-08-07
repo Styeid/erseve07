@@ -32,25 +32,25 @@ def ani_anystone(self, widget, *args):
 
 def ani_grey(self, widget, *args):
     animate = Animation(size_hint=(1, 1), duration=0.3, background_color=(206 / 255, 0 / 255, 0 / 255, 1))
-    animate += Animation(size_hint=(1, 1), duration=0.7, background_color=(0 / 255, 10 / 255, 90 / 255, 0))
+    animate += Animation(size_hint=(1, 1), duration=0.7, background_color=(0 / 255, 10 / 255, 90 / 255, 0.05))
     animate.start(widget)
 
 
 def ani_darkgrey(self, widget, *args):
     animate = Animation(size_hint=(1, 1), duration=0.3, background_color=(255 / 255, 95 / 255, 1 / 255, 1))
-    animate += Animation(size_hint=(1, 1), duration=0.7, background_color=(0 / 255, 10 / 255, 70 / 255, 0))
+    animate += Animation(size_hint=(1, 1), duration=0.7, background_color=(0 / 255, 10 / 255, 70 / 255, 0.05))
     animate.start(widget)
 
 
 def ani_darkgrey_holex(self, widget, *args):
     animate = Animation(size_hint=(1.5, 1), duration=0.3, background_color=(255 / 255, 95 / 255, 1 / 255, 1))
-    animate += Animation(size_hint=(1.5, 1), duration=0.7, background_color=(0 / 255, 10 / 255, 70 / 255, 0))
+    animate += Animation(size_hint=(1.5, 1), duration=0.7, background_color=(0 / 255, 10 / 255, 70 / 255, 0.05))
     animate.start(widget)
 
 
 def ani_darkgrey_holey(self, widget, *args):
-    animate = Animation(size_hint=(1, 2), duration=0.3, background_color=(255 / 255, 95 / 255, 1 / 255, 1))
-    animate += Animation(size_hint=(1, 2), duration=0.7, background_color=(0 / 255, 10 / 255, 70 / 255, 0))
+    animate = Animation(size_hint=(1, 0.3), duration=0.3, background_color=(255 / 255, 95 / 255, 1 / 255, 1))
+    animate += Animation(size_hint=(1, 0.3), duration=0.7, background_color=(0 / 255, 10 / 255, 70 / 255, 0.05))
     animate.start(widget)
 
 
