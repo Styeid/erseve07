@@ -1,5 +1,1170 @@
+#:import Factory kivy.factory.Factory
 
+<play1@Popup>
+    auto_dismiss: False
+    title: ""
+    background: "popup/popup13.png"
+    opacity: 0.99
+    RelativeLayout:
+####### MIX_UP SETTINGS           ############################
+        Label:
+            pos_hint: {"center_x": 0.27, "center_y": 0.94}
+            size_hint: 0.025, 1
+            font_name: "ttf/nasaliza"
+            text: "4"
+            color: (111/255, 213/255, 245/255, 1)
+            font_size: root.width * 0.037
+            bold: False
+            italic: True
+            outline_color: (233/255, 46/255, 251/255)
+            outline_width: 0
+        Button:
+            font_name: "ttf/seguisym"
+            text: u"\uE016"
+            color: (0/255, 255/255, 255/255, 1)
+            font_size: root.width * 0.015
+            background_normal: ""
+            background_color: (1/255, 220/255, 255/255, 0.5)
+            pos_hint: {"center_x": 0.087, "center_y": 0.94}
+            size_hint: 0.1, 0.09
+            on_release: Factory.play2().open()
+        Button:
+            font_name: "ttf/seguisym"
+            text: u"\uE017"
+            color: (0/255, 255/255, 255/255, 1)
+            font_size: root.width * 0.015
+            background_normal: ""
+            background_color: (1/255, 220/255, 255/255, 0.5)
+            pos_hint: {"center_x": 0.19, "center_y": 0.94}
+            size_hint: 0.1, 0.09
+            on_release: Factory.play2().open()
+        ProgressBar:
+            id: progressbar
+            min: 0
+            max: 34
+            pos_hint: {"center_x": 0.4, "center_y": 0.94}
+            size_hint_x: 0.2
+            background_color: (255/255, 32/255, 121/255, 1)
+        Button:
+            id: ex_progressbar
+            text: ""
+            font_size: root.width * 0.02
+            background_normal: ""
+            background_color: (255/255, 240/255, 240/255, 0.1)
+            size_hint: 0.247, 0.07
+            pos_hint: {"center_x": 0.375, "center_y": 0.947}
+            on_release: Factory.play3().open()
+####### JuFaJa_BUTTON             ############################
+        Button:
+            id: ex_jufaja
+            text: ""
+            font_size: root.width * 0.02
+            background_normal: ""
+            background_color: (255/255, 240/255, 240/255, 0.1)
+            size_hint: 0.2, 0.1
+            pos_hint: {"center_x": 0.89, "center_y": 0.96}
+            on_release: Factory.play4().open()
+####### CONTROLE(8) SIDE_ROWS     ############################
+        Button:
+            id: ex_leftup
+            text: ""
+            font_size: root.width * 0.02
+            background_normal: ""
+            background_color: (255/255, 240/255, 240/255, 0.1)
+            size_hint: 0.05, 0.15
+            pos_hint: {"center_x": 0.766, "center_y": 0.21}
+            on_release: Factory.play19c().open(), Factory.play19b().open(), Factory.play19a().open()
+        Button:
+            id: ex_upleft
+            text: ""
+            font_size: root.width * 0.02
+            background_normal: ""
+            background_color: (255/255, 240/255, 240/255, 0.1)
+            size_hint: 0.05, 0.15
+            pos_hint: {"center_x": 0.825, "center_y": 0.21}
+            on_release: Factory.play16c().open(), Factory.play16b().open(), Factory.play16a().open()
+        Button:
+            id: ex_upright
+            text: ""
+            font_size: root.width * 0.02
+            background_normal: ""
+            background_color: (255/255, 240/255, 240/255, 0.1)
+            size_hint: 0.05, 0.15
+            pos_hint: {"center_x": 0.879, "center_y": 0.21}
+            on_release: Factory.play15c().open(), Factory.play15b().open(), Factory.play15a().open()
+        Button:
+            id: ex_rightup
+            text: ""
+            font_size: root.width * 0.02
+            background_normal: ""
+            background_color: (255/255, 240/255, 240/255, 0.1)
+            size_hint: 0.05, 0.15
+            pos_hint: {"center_x": 0.937, "center_y": 0.21}
+            on_release: Factory.play22c().open(), Factory.play22b().open(), Factory.play22a().open()
+        Button:
+            id: ex_leftdown
+            text: ""
+            font_size: root.width * 0.02
+            background_normal: ""
+            background_color: (255/255, 240/255, 240/255, 0.1)
+            size_hint: 0.05, 0.15
+            pos_hint: {"center_x": 0.766, "center_y": 0.055}
+            on_release: Factory.play20c().open(), Factory.play20b().open(), Factory.play20a().open()
+        Button:
+            id: ex_downleft
+            text: ""
+            font_size: root.width * 0.02
+            background_normal: ""
+            background_color: (255/255, 240/255, 240/255, 0.1)
+            size_hint: 0.05, 0.15
+            pos_hint: {"center_x": 0.825, "center_y": 0.055}
+            on_release: Factory.play17c().open(), Factory.play17b().open(), Factory.play17a().open()
+        Button:
+            id: ex_downright
+            text: ""
+            font_size: root.width * 0.02
+            background_normal: ""
+            background_color: (255/255, 240/255, 240/255, 0.1)
+            size_hint: 0.05, 0.15
+            pos_hint: {"center_x": 0.879, "center_y": 0.055}
+            on_release: Factory.play18c().open(), Factory.play18b().open(), Factory.play18a().open()
+        Button:
+            id: ex_rightdown
+            text: ""
+            font_size: root.width * 0.02
+            background_normal: ""
+            background_color: (255/255, 240/255, 240/255, 0.1)
+            size_hint: 0.05, 0.15
+            pos_hint: {"center_x": 0.937, "center_y": 0.055}
+            on_release: Factory.play21c().open(), Factory.play21b().open(), Factory.play21a().open()
+####### CONTROLE_HOLE L+R/ EYE    ############################
+        Button:
+            id: ex_toright
+            text: ""
+            font_size: root.width * 0.02
+            background_normal: ""
+            background_color: (255/255, 240/255, 240/255, 0.1)
+            size_hint: 0.07, 0.10
+            pos_hint: {"center_x": 0.69, "center_y": 0.15}
+            on_release: Factory.play11c().open(), Factory.play11b().open(), Factory.play11a().open()
+        Button:
+            id: ex_toleft
+            text: ""
+            font_size: root.width * 0.02
+            background_normal: ""
+            background_color: (255/255, 240/255, 240/255, 0.1)
+            size_hint: 0.07, 0.10
+            pos_hint: {"center_x": 0.54, "center_y": 0.15}
+            on_release: Factory.play12c().open(), Factory.play12b().open(), Factory.play12a().open()
+        Button:
+            id: ex_toup
+            text: ""
+            font_size: root.width * 0.02
+            background_normal: ""
+            background_color: (255/255, 240/255, 240/255, 0.1)
+            size_hint: 0.077, 0.09
+            pos_hint: {"center_x": 0.615, "center_y": 0.242}
+            on_release: Factory.play13c().open(), Factory.play13b().open(), Factory.play13a().open()
+        Button:
+            id: ex_todown
+            text: ""
+            font_size: root.width * 0.02
+            background_normal: ""
+            background_color: (255/255, 240/255, 240/255, 0.1)
+            size_hint: 0.077, 0.09
+            pos_hint: {"center_x": 0.615, "center_y": 0.057}
+            on_release: Factory.play14c().open(), Factory.play14b().open(), Factory.play14a().open()
+        Button:
+            id: eye001
+            text: ""
+            font_size: root.width * 0.02
+            background_normal: ""
+            background_color: (255/255, 240/255, 240/255, 0.1)
+            size_hint: 0.077, 0.09
+            pos_hint: {"center_x": 0.615, "center_y": 0.15}
+            on_release: Factory.play23().open()
+####### CONTROLE_MIDDEL_ROW/FRONT ############################
+        Button:
+            id: ex_frontr
+            text: ""
+            font_size: root.width * 0.02
+            background_normal: ""
+            background_color: (255/255, 240/255, 240/255, 0.1)
+            size_hint: 0.07, 0.10
+            pos_hint: {"center_x": 0.22, "center_y": 0.241}
+            on_release: Factory.play5c().open(), Factory.play5b().open(), Factory.play5a().open()
+        Button:
+            id: ex_frontl
+            text: ""
+            font_size: root.width * 0.02
+            background_normal: ""
+            background_color: (255/255, 240/255, 240/255, 0.1)
+            size_hint: 0.07, 0.10
+            pos_hint: {"center_x": 0.076, "center_y": 0.241}
+            on_release: Factory.play6c().open(), Factory.play6b().open(), Factory.play6a().open()
+        Button:
+            id: ex_left
+            text: ""
+            font_size: root.width * 0.02
+            background_normal: ""
+            background_color: (255/255, 240/255, 240/255, 0.1)
+            size_hint: 0.106, 0.082
+            pos_hint: {"center_x": 0.094, "center_y": 0.145}
+            on_release: Factory.play9c().open(), Factory.play9b().open(), Factory.play9a().open()
+        Button:
+            id: ex_right
+            text: ""
+            font_size: root.width * 0.02
+            background_normal: ""
+            background_color: (255/255, 240/255, 240/255, 0.1)
+            size_hint: 0.106, 0.082
+            pos_hint: {"center_x": 0.202, "center_y": 0.145}
+            on_release: Factory.play10c().open(), Factory.play10b().open(), Factory.play10a().open()
+        Button:
+            id: ex_up
+            text: ""
+            font_size: root.width * 0.02
+            background_normal: ""
+            background_color: (255/255, 240/255, 240/255, 0.1)
+            size_hint: 0.07, 0.10
+            pos_hint: {"center_x": 0.148, "center_y": 0.241}
+            on_release: Factory.play7c().open(), Factory.play7b().open(), Factory.play7a().open()
+        Button:
+            id: ex_down
+            text: ""
+            font_size: root.width * 0.02
+            background_normal: ""
+            background_color: (255/255, 240/255, 240/255, 0.1)
+            size_hint: 0.07, 0.10
+            pos_hint: {"center_x": 0.148, "center_y": 0.05}
+            on_release: Factory.play8c().open(), Factory.play8b().open(), Factory.play8a().open()
+####### CLOSE_BUTTON #########################################
+        Button:
+            size_hint: 0.07, 0.09
+            pos_hint: {"center_x": 0.067, "center_y": 0.04}
+            text: "close"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+### POPUP'S ##########################################################################
+<play2@Popup>
+    auto_dismiss: True
+    pos_hint: {"center_x": 0.31, "center_y": 0.6}
+    size_hint: 0.6, 0.5
+    title: ""
+    background: "popup/mixupset002.png"
+    opacity: 0.69
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            #text: "'< = decrease number of mix up.\n > = increase number of mix up.\n\n note! The higher the mix up\n the higher the time and amount of moves\n to resolve the grid'"
+            font_size: 24
 
+<play3@Popup>
+    auto_dismiss: True
+    pos_hint: {"center_x": 0.4, "center_y": 0.67}
+    size_hint: 0.55, 0.45
+    title: ""
+    background: "popup/barind001.png"
+    opacity: 0.69
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            #text: "Bar indicator displays:\n\nminimum mix up = 2\nmaximum mix up = 34"
+            font_size: 24
+
+<play4@Popup>
+    auto_dismiss: True
+    pos_hint: {"center_x": 0.62, "center_y": 0.6}
+    size_hint: 0.7, 0.6
+    title: ""
+    background: "popup/jufajaicon001.png"
+    opacity: 0.69
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            #text: "Starts the play.\n\nActivate the rest of the move icons.\nStarts countdown of time and moves"
+            font_size: 24
+
+<play5a@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/recom02a.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "next"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play5b@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/om02x.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "next"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play5c@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/recom02b.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "close"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play6a@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/linom02a.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "next"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play6b@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/om02z.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "next"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play6c@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/linom02b.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "close"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play7a@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/6up02a.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "next"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play7b@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/6up02b.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "next"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play7c@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/6up02c.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "close"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play8a@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/8do02a.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "next"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play8b@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/8do02b.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "next"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play8c@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/8do02c.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "close"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play9a@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/9le02a.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "next"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play9b@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/9le02b.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "next"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play9c@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/9le02c.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "close"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play10a@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/10re02a.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "next"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play10b@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/10re02b.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "next"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play10c@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/10re02c.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "close"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play11a@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/11lho02a.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "next"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play11b@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/11lho02b.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "next"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play11c@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/11lho02c.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "close"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play12a@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/12rho02a.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "next"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play12b@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/12rho02b.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "next"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play12c@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/12rho02c.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "close"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play13a@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/13uho02a.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "next"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play13b@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/13uho02b.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "next"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play13c@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/13uho02c.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "close"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play14a@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/14dho02a.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "next"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play14b@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/14dho02b.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "next"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play14c@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/14dho02c.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "close"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play15a@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/15rto02a.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "next"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play15b@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/15rto02b.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "next"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play15c@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/15rto02c.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "close"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play16a@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/16lto02a.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "next"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play16b@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/16lto02b.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "next"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play16c@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/16lto02c.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "close"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play17a@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/17lbo02a.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "next"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play17b@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/17lbo02b.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "next"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play17c@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/17lbo02c.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "close"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play18a@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/18rbo02a.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "next"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play18b@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/18rbo02b.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "next"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play18c@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/18rbo02c.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "close"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play19a@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/19ule2a.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "next"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play19b@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/19ule2b.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "next"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play19c@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/19ule2c.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "close"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play20a@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/20dle2a.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "next"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play20b@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/20dle2b.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "next"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play20c@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/20dle2c.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "close"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play21a@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/21dre2a.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "next"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play21b@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/21dre2b.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "next"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play21c@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/21dre2c.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "close"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play22a@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/22ure2a.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "next"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play22b@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/22ure2b.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "next"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play22c@Popup>
+    auto_dismiss: True
+    size_hint: 1, 1
+    title: ""
+    background: "popup/22ure2c.png"
+    opacity: 0.99
+    BoxLayout:
+        Label:
+        Button:
+            size_hint: 0.1, 0.05
+            pos_hint: {"center_x": 0.9, "center_y": 0.15}
+            text: "close"
+            font_size: 13
+            background_normal: ""
+            background_color: (255/255, 70/255, 90/255, 1)
+            on_release: root.dismiss()
+<play23@Popup>
+    auto_dismiss: True
+    pos_hint: {"center_x": 0.4, "center_y": 0.47}
+    size_hint: 0.8, 0.7
+    title: ""
+    background: "popup/eye001.png"
+    opacity: 0.69
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            #text: "display eye"
+            font_size: 24
+#### END POPUP LayOUT ###############################################
+#### Begin JuFaJa Game ##############################################
 <GridLayout>
 ####   Ruimte per individ Kubiek-Vlak   ########
     padding: 3                     ########   DEFAULT PADDING=3  ####
@@ -174,13 +1339,13 @@ MyLayoutYo:
             on_press: root.start_button_start()
         ControlXButton:
             id: home_twob
-            text: "\n\nExit Game"
+            text: "\n\nExit"
             color: 240/255, 240/255, 240/255, 0.5
             font_name: "ttf/nasaliza"
             font_size: root.width * 0.02
-            size_hint: 0.15, 0.15
+            size_hint: 0.13, 0.13
             disabled: False
-            pos_hint: {"center_x": 0.7, "center_y": 1}
+            pos_hint: {"center_x": 0.72, "center_y": 1}
             canvas.before:
                 Color:
                     rgba: (230/255, 10/255, 40/255, 0.47)
@@ -189,6 +1354,23 @@ MyLayoutYo:
                     pos: self.pos
                     radius: [40]
             on_press: root.close_win()
+        ControlXButton:
+            id: home_twob
+            text: "\n\n play?"
+            color: 240/255, 240/255, 240/255, 0.5
+            font_name: "ttf/nasaliza"
+            font_size: root.width * 0.02
+            size_hint: 0.13, 0.13
+            disabled: False
+            pos_hint: {"center_x": 0.59, "center_y": 1}
+            canvas.before:
+                Color:
+                    rgba: (230/255, 10/255, 40/255, 0.47)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [40]
+            on_release: Factory.play1().open()
         Button:
             id: home_three
             text: ""

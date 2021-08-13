@@ -8,9 +8,9 @@ from kivy.core.window import Window
 from kivy.clock import Clock
 from kivy.core.audio import SoundLoader
 
-#Window.size = (870, 430)
+Window.size = (870, 430)
 
-#Builder.load_file("jufaja.kv")
+#Builder.load_file("about.kv")
 
 
 class MyLayoutYo(RelativeLayout):
