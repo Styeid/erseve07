@@ -10,3 +10,11 @@ Jufaja-project-05-04082021
     - upscale time
     - Add file eyeRA (jpg)
     - new image icon number 2 (png)
+  - 13- 08- 2021 finished improvments
+    - remove unnasasry image files(cleanup)
+    - improvement layout move buttons
+    - add upscale time-and moves
+    - add of "controle explained(ce)" menu
+      - add module Factory.kivy
+    - add 59 png.files (for ce-menu)
+    - out-commented Window.size = (870, 430)
