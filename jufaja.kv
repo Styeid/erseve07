@@ -1339,37 +1339,37 @@ MyLayoutYo:
             on_press: root.start_button_start()
         ControlXButton:
             id: home_twob
-            text: "\n\nExit"
+            text: u"\uE07D"
             color: 240/255, 240/255, 240/255, 0.5
-            font_name: "ttf/nasaliza"
-            font_size: root.width * 0.02
+            font_name: "ttf/seguisym"
+            font_size: root.width * 0.047
             size_hint: 0.13, 0.13
             disabled: False
-            pos_hint: {"center_x": 0.72, "center_y": 1}
+            pos_hint: {"center_x": 0.57, "center_y": 0.95}
             canvas.before:
                 Color:
                     rgba: (230/255, 10/255, 40/255, 0.47)
                 RoundedRectangle:
                     size: self.size
                     pos: self.pos
-                    radius: [40]
+                    radius: [47]
             on_press: root.close_win()
         ControlXButton:
             id: home_twob
-            text: "\n\n play?"
+            font_name: "ttf/seguisym"
+            text: u"\uE2D2"
             color: 240/255, 240/255, 240/255, 0.5
-            font_name: "ttf/nasaliza"
-            font_size: root.width * 0.02
+            font_size: root.width * 0.07
             size_hint: 0.13, 0.13
             disabled: False
-            pos_hint: {"center_x": 0.59, "center_y": 1}
+            pos_hint: {"center_x": 0.71, "center_y": 0.95}
             canvas.before:
                 Color:
                     rgba: (230/255, 10/255, 40/255, 0.47)
                 RoundedRectangle:
                     size: self.size
                     pos: self.pos
-                    radius: [40]
+                    radius: [47]
             on_release: Factory.play1().open()
         Button:
             id: home_three
