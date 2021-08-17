@@ -1,7 +1,7 @@
 #:import Factory kivy.factory.Factory
 
 <PopupXbutton@Button>
-    pos_hint: {"center_x": 0.94, "center_y": 0.164}
+    pos_hint: {"center_x": 0.94, "center_y": 0.145}
     size_hint: 0.09, 0.1
     font_name: "ttf/nasaliza"
     font_size: root.width * .25
@@ -261,7 +261,7 @@
             on_release: Factory.play8c().open(), Factory.play8b().open(), Factory.play8a().open()
 ####### CLOSE_BUTTON #########################################
         PopupXbutton:
-            pos_hint: {"center_x": 0.067, "center_y": 0.04}
+            pos_hint: {"center_x": 0.05, "center_y": 0.03}
             text: "close"
             on_release: root.dismiss()
 ### POPUP'S ##########################################################################

@@ -8,7 +8,7 @@ from kivy.core.window import Window
 from kivy.clock import Clock
 from kivy.core.audio import SoundLoader
 
-#Window.size = (770, 330)
+#Window.size = (790, 350)
 
 #Builder.load_file("about.kv")
 
