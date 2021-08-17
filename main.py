@@ -213,6 +213,7 @@ class MyLayoutYo(RelativeLayout):
     def time_stop(self, *args):
         if self.U_TOTAAL:
             self.ids.home_one.text = "J U F A J A  Grid"
+            self.ids.home_onex.text = "Pro"
             self.TIME_SCOOP = 0
             self.ids.STart_BUT.opacity = 0.9
             self.deactivate_twists()
@@ -379,6 +380,7 @@ class MyLayoutYo(RelativeLayout):
             self.NB_of_TWISTs = self.NB_of_TWISTs - 1
             self.ids.nu_of_twists.text = str(self.MAX_twists)
         self.ids.home_one.text = ""
+        self.ids.home_onex.text = ""
         self.deact_on_start()
         self.reset_all()
 
@@ -391,6 +393,7 @@ class MyLayoutYo(RelativeLayout):
             self.NB_of_TWISTs = self.NB_of_TWISTs + 1
             self.ids.nu_of_twists.text = str(self.MIN_twists)
         self.ids.home_one.text = ""
+        self.ids.home_onex.text = ""
         self.deact_on_start()
         self.reset_all()
 
